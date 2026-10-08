@@ -7,4 +7,4 @@ select
     created as payment_created,
     _batched_at
 from
-    raw.stripe.payment
+    {{ source('stripe', 'payment') }}
