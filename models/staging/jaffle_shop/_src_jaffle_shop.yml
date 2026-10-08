@@ -4,9 +4,14 @@ sources:
     schema: jaffle_shop
     tables:
       - name: customers
+
       - name: orders
-  - name: stripe
-    database: raw
-    schema: stripe
-    tables:
-      - name: payment
+        config:
+          freshness:
+            warn_after:
+              count: 10
+              period: day
+            error_after:
+              count: 30
+              period: day
+          loaded_at_field: _etl_loaded_at
