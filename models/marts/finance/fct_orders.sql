@@ -14,7 +14,7 @@ order_payments as (
 
     select
         order_id,
-        sum(payment_amount) as amount
+        sum(amount) as amount
     from
         payments
     where
