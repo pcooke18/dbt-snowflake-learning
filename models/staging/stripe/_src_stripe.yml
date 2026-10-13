@@ -2,6 +2,14 @@ sources:
   - name: stripe
     database: raw
     schema: stripe
-    
+    description: A clone of a Postgres application database.
     tables:
       - name: payment
+        description: Raw payments data.
+        columns:
+          - name: id
+            description: Primary key for payments data.
+            data_tests:
+              - unique
+              - not_null
+              
