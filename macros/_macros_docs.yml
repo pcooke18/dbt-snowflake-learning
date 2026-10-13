@@ -1,0 +1,10 @@
+macros:
+  - name: cents_to_dollars
+    description: A macro that converts dollars to cents and rounds to a specified number of decimals (2 if unspecified).
+    arguments:
+      - name: column_name
+        type: string
+        description: The column you want to convert
+      - name: decimals
+        type: integer
+        description: The amount of decimal places you'd like to set.
