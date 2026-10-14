@@ -8,3 +8,14 @@ macros:
       - name: decimals
         type: integer
         description: The amount of decimal places you'd like to set.
+  - name: grant_select
+    description: A macro that grants select privs on schema on target.schema to target.role, unless otherwise specified.
+    arguments:
+      - name: schema
+        type: string
+        description: Schemas we want to grant privs; by default is our target schema.
+      - name: role
+        type: string
+        description: The role you want to grant privs; by default is our target role.
+  - name: debug_target
+    description: A macro that logs target name, schema, and role.
