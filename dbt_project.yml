@@ -42,3 +42,10 @@ models:
       +materialized: view
     marts:
       +materialized: table
+
+    # Throws error
+      
+    # audit:
+    #   +enabled: false
+    # snowflake_spend:
+    #   enabled: True
