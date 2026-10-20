@@ -1,5 +1,5 @@
--- {%- set payment_methods = ['credit_card', 'bank_transfer', 'coupon', 'gift_card'] -%} -- hard coded values
-{%- set payment_methods = dbt_utils.get_column_values( table = ref( 'stg_stripe__payment' ), column = 'payment_method') -%} -- dynamic values
+{%- set payment_methods = ['credit_card', 'bank_transfer', 'coupon', 'gift_card'] -%} -- hard coded values
+-- {% set payment_methods = dbt_utils.get_column_values( table = ref( 'stg_stripe__payment' ), column = 'payment_method') %} -- dynamic values
 
 
 with payments as (
